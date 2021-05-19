@@ -85,7 +85,7 @@ void parse_file ( char * filename,
                   struct matrix * polygons,
                   screen s) {
 
-  color c = { 0, 0, 0 }; 
+  color c = { 192, 192, 192 }; 
   int steps = 100;
   int steps_3d = 20;
 
@@ -234,7 +234,7 @@ void parse_file ( char * filename,
         fgets(line, 255, f); 
         clear_screen(s); 
         draw_lines(edges, s, c); 
-        draw_lines(polygons, s, c);
+        draw_polygons(polygons, s, c);
         save_extension(s, line); 
     }
     else if ( !strcmp(line, "quit") )
