@@ -207,7 +207,7 @@ void parse_file ( char * filename,
     }
     else if ( !strcmp(line, "pop") )
     {
-        if(csystems->size > STACK_SIZE)
+        if(csystems->size > 1)
             pop(csystems);
     }
     else if ( !strcmp(line, "apply") )
